@@ -32,12 +32,27 @@ namespace Puzzles
             Console.WriteLine($"Sum of all values: {sum}");
             return result;
         }
+        public static string TossCoin(){
+            Random rand = new Random();
+            Console.WriteLine("Tossing a coin...");
+            int result = rand.Next(0,2);
+            if(result == 0) {
+                Console.WriteLine($"Tails, {result}");
+                return "Tails";
+            } else {
+                Console.WriteLine($"Heads, {result}");
+                return "Heads";
+            }
+        }
+
+
         // // // //
         // MAIN //
         static void Main(string[] args)
         {
             Console.WriteLine("Puzzles Practice");
             RandomArray();
+            TossCoin();
         }
     }
 }
