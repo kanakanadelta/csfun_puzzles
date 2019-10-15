@@ -14,17 +14,12 @@ namespace Puzzles
             int sum = firstNum;
             
             int idx = 1;
-            while(idx < 10)
-            {
+            while(idx < 10){
                 int rNum = rand.Next(5, 25);
                 if(rNum < min) 
-                {
                     min = rNum;
-                }
                 if(rNum > max)
-                {
                     max = rNum;
-                }
                 result[idx] = rNum;
                 sum+=rNum;
                 idx++;
@@ -57,10 +52,8 @@ namespace Puzzles
             {
                 string coinToss = TossCoin();
                 if(coinToss == "Heads")
-                {
                     Console.WriteLine("you won a toss!");
                     wins++;
-                }
                 tossCount++;
             }
             double winRatio = (double)wins/num;
